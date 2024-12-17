@@ -1,0 +1,125 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    font-family: "ubuntu", serif;
+    overflow-y: hidden;
+}
+
+.Form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 650px;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+    animation: 1s ease-out 0s 1 MoveUp;
+
+}
+
+
+
+button.form-option {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    width: 300px;
+    font-size: 1rem;
+}
+
+@keyframes MoveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+input {
+    width: 80%;
+    max-width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+button.form-option:hover {
+    background-color: #123d6b;
+}
+
+.showPass {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+span {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+input[type="checkbox"] {
+    width: fit-content;
+    transform: scale(2);
+    line-height: 30px;
+
+}
+
+@media (min-width:100px) and (max-width:450px) {
+    button.form-option {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.2);
+    }
+
+    span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width:2000px) {
+    .Request-form {
+        font-size: 2rem;
+    }
+
+    input {
+        padding: 15px;
+    }
+
+    button.form-option {
+        font-size: 2rem;
+    }
+
+}

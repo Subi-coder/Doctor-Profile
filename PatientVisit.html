@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor/Patient-Visit</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("./images/silas-baisch-K785Da4A_JA-unsplash.jpg")
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .visit-Container {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid bisque;
+            padding: 100px;
+            z-index: 2;
+        }
+
+        img {
+            z-index: 2;
+        }
+
+
+        .border {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2);
+            z-index: -10;
+            width: 50%;
+            color: beige;
+            max-width: 900px;
+            height: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./images/Patient-Visit.png" alt="Doctor">
+        <div class="visit-Container">
+            <svg class="in" width="50px" height="50px" viewBox="0 0 20 20" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="layer1">
+                    <path
+                        d="M 8 1 L 8 5 L 9 5 L 9 2 L 19 2 L 19 19 L 9 19 L 9 16 L 8 16 L 8 20 L 20 20 L 20 1 L 8 1 z M 10 7 L 13 10 L 0 10 L 0 11 L 13 11 L 10 14 L 11.5 14 L 15 10.5 L 11.5 7 L 10 7 z "
+                        style="fill:#222222; fill-opacity:1; stroke:none; stroke-width:0px;" />
+                </g>
+            </svg>
+            <input type="time" placeholder="From Time" id="FromTime">
+            <svg class="out" width="50px" height="50px" viewBox="0 0 20 20" version="1.1"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="layer1">
+                    <path
+                        d="M 0 1 L 0 20 L 12 20 L 12 16 L 11 16 L 11 19 L 1 19 L 1 2 L 11 2 L 11 5 L 12 5 L 12 1 L 0 1 z M 15 7 L 18 10 L 5 10 L 5 11 L 18 11 L 15 14 L 16.5 14 L 20 10.5 L 16.5 7 L 15 7 z "
+                        style="fill:#222222; fill-opacity:1; stroke:none; stroke-width:0px;" />
+                </g>
+            </svg>
+
+            <input type="time" placeholder="To Time" id="ToTime">
+            <input type="text" placeholder="Number of Patients to be visited Today">
+            <button class="Button Proceed">Proceed</button>
+            <button class="Button GoBack">Go Back</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

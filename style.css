@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --subHeading: white;
+    --HeadingText: "Sour Gummy", sans-serif;
+    --SubHeadingText: "Roboto Condensed", sans-serif;
+    --form-text: "ubuntu", serif;
+    --primary-color: #007BFF;
+    --button-hover-color: #0056b3;
+    --bg: red;
+}
+
+body {
+    background-image: url(./images/header-Image.avif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: var(--HeadingText);
+    font-size: 7rem;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-align: center;
+    text-shadow: 0 0 0.1px rgba(255, 255, 255, 0.108);
+
+}
+
+.Header-Container {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 20%;
+    z-index: 1;
+
+}
+
+.Header-Content {
+    text-align: center;
+    z-index: 2;
+}
+
+.Header-Content h2 {
+    font-family: var(--SubHeadingText);
+    transform: translatex(30%);
+    color: var(--subHeading);
+    font-size: 2rem;
+}
+
+main {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.Form-container {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+
+.Request-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--form-text);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    transform: translateY(-50%);
+
+}
+
+.form {
+    font-family: var(--form-text);
+    margin: 10px 0;
+}
+
+#background-image {
+    z-index: -85;
+}
+
+.form-question {
+    font-size: 2rem;
+}
+
+button.form-option {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    width: 300px;
+    font-size: 2rem;
+}
+
+button.form-option:hover {
+    background-color: var(--button-hover-color);
+}
+
+.Request-form p {
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+
+@media (min-width: 100px) and (max-width:400px) {
+    h1 {
+        font-size: 4rem;
+        margin: 5px;
+    }
+
+    .Header-Content h2 {
+        margin-top: 100px;
+        font-size: 1rem;
+        transform: translateX(0);
+    }
+
+    .Request-form {
+        max-width: 240px;
+    }
+
+    .form {
+        font-size: 1rem;
+    }
+
+    .Form-container {
+        transform: translateY(150%);
+    }
+
+    .Request-form p {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    button.form.form-option {
+        width: 100%;
+    }
+
+    button.form-option {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 401px) and (max-width:780px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .Header-Content h2 {
+        font-size: 1.5rem;
+        transform: translateX(0);
+    }
+
+    .Request-form {
+        max-width: 750px;
+        margin: 10px;
+    }
+
+    .form {
+        font-size: 1.4rem;
+    }
+
+    button.form.form-option {
+        width: 80%;
+    }
+
+    button.form-option {
+        font-size: 1.5rem;
+    }
+
+    .Request-form p {
+        font-size: 1.5rem;
+        transform: translateY(-40%);
+    }
+}
+
+
+@media (min-width: 781px) and (max-width:2800px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+
+    .Header-Content h2 {
+        font-size: 1.8rem;
+        transform: translateX(0);
+    }
+
+    .Request-form {
+        max-width: 750px;
+        margin: 10px;
+    }
+
+    .form {
+        font-size: 1.8rem;
+    }
+
+    button.form-option {
+        font-size: 1.8rem;
+        width: 80%;
+    }
+
+    .Request-form p {
+        font-size: 1.8rem;
+        transform: translateY(-40%);
+    }
+
+
+}
