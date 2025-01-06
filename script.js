@@ -1,11 +1,10 @@
 const doctorBtn = document.querySelector("#doctor-Button");
-const recipientrBtn = document.querySelector("#recipient-Button");
+const recipientBtn = document.querySelector("#recipient-Button");
 
 doctorBtn.addEventListener("click", function () {
-    window.location = "./doctorLogin.html"
+  window.location = "./DoctorLogin.html";
 });
 
-
-recipientrBtn.addEventListener("click", function () {
-    window.location = "./RecipientLogin.html"
+recipientBtn.addEventListener("click", function () {
+  window.location = "./RecipientLogin.html";
 });

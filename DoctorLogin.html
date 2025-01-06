@@ -44,6 +44,7 @@
     </main>
 </body>
 <script>
+    const newDoctorLogin = document.querySelector("#newDoctor")
     const doctorCode = "PRAVEEN";
     const correctPassword = "DOCTOR123";
     const passwordField = document.getElementById("d-pass");
@@ -75,6 +76,10 @@
     });
     const Login = document.querySelector("#login");
     Login.addEventListener("click", validateLogin)
+
+    newDoctorLogin.addEventListener("click", function () {
+        window.location = "./NewDoctor.html"
+    })
 </script>
 
 </html>
